@@ -66,9 +66,12 @@ kpAddLabels(kp, "centromere", r0=0.23, srt=90, label.margin=0.035,font=1.5, cex=
 kpAddLabels(kp, "all repeats", r0=-0.5, srt=90, label.margin=0.035,font=1.5, cex=0.6)
 kpAddBaseNumbers(kp, tick.dist = 10000000, tick.len = 2, tick.col="black", cex=0.6)
 
-kpPlotDensity(kp, data=Ep_genes, col = alpha("purple", 0.05), r0=0.66,r1=0.96)
-kpPlotDensity(kp, data=Ep_centro, col = alpha("gold", 0.05), r0=0.33,r1=0.63)
-kpPlotDensity(kp, data=Ep_repeats, col=alpha("black", 0.05), r0=0.0,r1=0.3)
+kpPlotDensity(kp, data=Ep_genes, col = alpha("purple", 0.05), r0=0.69,r1=0.93)
+kpAxis(kp, ymax=kp$latest.plot$computed.values$max.density, r0=0.69,r1=0.93,cex=0.6,side=2)
+kpPlotDensity(kp, data=Ep_centro, col = alpha("gold", 0.05), r0=0.36,r1=0.60)
+kpAxis(kp, ymax=kp$latest.plot$computed.values$max.density, r0=0.36,r1=0.60,cex=0.6,side=2)
+kpPlotDensity(kp, data=Ep_repeats, col=alpha("black", 0.05), r0=0.0,r1=0.27)
+kpAxis(kp, ymax=kp$latest.plot$computed.values$max.density, r0=0.0,r1=0.27,cex=0.6,side=2)
 
 dev.off()
 
